@@ -105,3 +105,14 @@ const (
 	ADC_CH21_PIN Pin = A4
 	ADC_CH22_PIN Pin = A5
 )
+
+// UART1 connects to the ESP32-S3, which bridges it to the USB CDC port.
+// UART2 is on the D0/D1 header pins.
+// UART3 connects to the ESP32-S3 AT command interface (SerialNina in the
+// Arduino core).
+var (
+	UART1       = &sci9UART
+	UART2       = &sci2UART
+	UART3       = &sci1UART
+	DefaultUART = UART1
+)
